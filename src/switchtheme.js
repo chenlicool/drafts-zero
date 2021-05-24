@@ -9,10 +9,6 @@ theme.addEventListener('click', () => {
 
 
 
-
-
-
-
 /*
 function handleChange(mediaQueryListEvent) {
     if (mediaQueryListEvent.matches) {
