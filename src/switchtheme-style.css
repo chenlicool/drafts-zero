@@ -80,31 +80,6 @@ body.dark {
    
 }
 
-/* 鼠标跟随 START*/
-.wrap {
-    position:absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    overflow: hidden;
-}
-#ball {
-    width: 60px;
-    height: 60px;
-    background: none;
-    border:1px solid rgb(238, 29, 29);
-    border-radius:50%;
-    left: 50%;
-    top: 50%;
-    margin: -10px 0 0 -10px;
-    pointer-events: none;
-}
-
-/* 鼠标跟随 END */
-
-
-
 
 .iconSize {
     width: 48px;
@@ -133,6 +108,5 @@ body.dark {
     color: var(--text-color-un);
     outline: none;
     transform:scale(1.1);
-
-
 }
+
