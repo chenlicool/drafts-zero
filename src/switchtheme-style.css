@@ -1,0 +1,138 @@
+body {
+    --accent-color:#4E6E0C;
+    --accent-color-hovered:#415C0A;
+    --background-color:#F0FBDA;
+    --text-color:#141D01;
+    --text-color-un:#F0FBDA;
+    --transform-delay: 1s ;
+    --transform-rotation: 180dg ;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    margin:0;
+
+    background-color: var(--background-color);
+    color: var(--text-color);
+    transition:var(--transform-delay) ;
+}
+
+h1,h2,h3,h4,h5,h6{
+    margin: 4px;
+}
+p{margin:0px;}
+
+body.dark {
+    --accent-color:#8FC81E;
+    --accent-color-hovered:#B5DE63;
+    --background-color:#333333;
+    --text-color:#F0FBDA;
+    --text-color-un:#141D01;
+    --transform-delay:1s;
+    --transform-rotation: 0 ;
+}
+.textcontent{
+    position: absolute;
+    top: 0;
+    height: 200vmin;
+    text-align: center;
+}
+.sun-moon-container{
+
+    pointer-events:none;
+    overflow: hidden;
+   
+    transition: transform var(--transform-delay);
+    transition: var(--transform-rotation);
+
+}
+
+.dark .sun-moon-container{
+    
+    
+}
+.sun,
+.moon{
+
+    position: absolute;
+    transition: opacity, fill var(--transform-delay);
+    width: 30px;
+    height: 30px;
+    fill:var(--accent-color);
+   
+}
+
+.sun{
+    top: 5%;
+}
+.dark .sun{
+    opacity: 0;
+   
+}
+.moon{
+    bottom: 5%;
+    opacity: 0;
+}
+
+.dark .moon{
+    opacity: 1;
+   
+}
+
+/* 鼠标跟随 START*/
+.wrap {
+    position:absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    overflow: hidden;
+}
+#ball {
+    width: 60px;
+    height: 60px;
+    background: none;
+    border:1px solid rgb(238, 29, 29);
+    border-radius:50%;
+    left: 50%;
+    top: 50%;
+    margin: -10px 0 0 -10px;
+    pointer-events: none;
+}
+
+/* 鼠标跟随 END */
+
+
+
+
+.iconSize {
+    width: 48px;
+    height: 48px;
+}
+
+.switchButton {
+    background-color: var(--accent-color);
+    color: var(--text-color-un);
+    padding: 12px 32px;
+    border:none;
+    outline: none;
+    border-radius: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: var(--transform-delay);
+    transform: scale(1);
+}
+
+.switchButton:hover,
+.switchButton:focus {
+    background-color: var(--accent-color-hovered);
+    color: var(--text-color-un);
+    outline: none;
+    transform:scale(1.1);
+
+
+}
